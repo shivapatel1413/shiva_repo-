@@ -1,0 +1,40 @@
+informatica-app-sa@clgx-informatica-dev-183b.iam.gserviceaccount.com
+
+
+step1:
+==========
+gcloud auth activate-service-account  informatica-app-sa@clgx-informatica-dev-183b.iam.gserviceaccount.com --key-file=D:\Keys\informatica-app-sa-dev-183b.json
+
+
+
+step2:
+=====
+
+gcloud init
+
+Step3:-
+============
+gsutil ls gs://clgx-informatica-dev-taxbi/
+
+STPE4:-
+==============
+
+gsutil -m cp -r E:\Infa_shared\Portfolio\CheckWriter tables  gs://clgx-informatica-dev-taxbi/Portfolio/
+
+
+gs://clgx-informatica-dev-taxbi/Portfolio/
+
+
+PROD server:-
+===========
+Step 5:
+======
+
+gcloud auth activate-service-account  informatica-app-sa@clgx-informatica-dev-183b.iam.gserviceaccount.com --key-file=D:\dev_keys\dev_key.json
+
+
+Step6:
+======
+
+gsutil -m cp -r gs://clgx-informatica-dev-taxbi/Portfolio/las_ada_ba_img_pe  E:\Portfolio_199_Dev_Migrate\Portfolio\
+
